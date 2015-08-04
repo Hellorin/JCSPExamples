@@ -15,4 +15,4 @@ There is three examples in this repository for now:
     * Using the mechanisms of channel poisoning as well
     * Can be found in the package ch.hellorin.jcsp.altingPoisonChannel
     
-More example are to be added in the future
+More example are to be added in the future...
