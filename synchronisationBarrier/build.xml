@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<project name="synchronisationBarrier" default="jar">
+    <property name="src.dir" location="src" />
+    <property name="classes.dir" location="classes" />
+    <property name="target.dir" location="target" />
+    <property name="jars.dir" location="../libs" />
+
+    <target name="compile">
+        <echo>Compiling</echo>
+        <mkdir dir="${classes.dir}" />
+        <mkdir dir="${target.dir}" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+            <classpath>
+                   <fileset dir="${jars.dir}">
+                      <include name="**/*.jar" />
+                   </fileset>
+             </classpath>
+        </javac>
+    </target>
+    
+    <target name="jar" depends="compile">
+        <echo>Packaging</echo>
+        <mkdir dir="${classes.dir}"/>
+        <jar destfile="${target.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="ch.hellorin.jcsp.TestSensors"/>
+            </manifest>
+            <zipgroupfileset dir="${jars.dir}" includes="**/*.jar"/>
+        </jar>
+    </target>
+
+    <target name="run" depends="compile, jar">
+        <echo>Running</echo>
+        <java jar="target/synchronisationBarrier.jar" fork="true"/>
+    </target>
+
+    <target name="clean" description="Clean up output directories.">
+        <delete dir="${classes.dir}" />
+        <delete dir="${target.dir}" />
+    </target>
+</project>

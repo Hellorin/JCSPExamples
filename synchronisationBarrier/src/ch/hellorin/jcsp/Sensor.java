@@ -1,12 +1,11 @@
-package ch.hellorin.jcsp.synchronisationBarrier;
+package ch.hellorin.jcsp;
 
 import java.util.Random;
 import org.jcsp.lang.*;
 
 /**
- * Un processus capteur qui consiste à se synchroniser
- * sur une barriere une fois que ces données sont prêtes
- * et les envoyer à l'appareil de mesure
+ * A sensor process that synchronise to a synchronisation barrier
+ * once data are available to be send to the measuring device
  * 
  * @author David LAWRENCE
  *

@@ -1,4 +1,4 @@
-package ch.hellorin.jcsp.synchronisationBarrier;
+package ch.hellorin.jcsp;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -40,7 +40,7 @@ public class MeasuringDevice implements CSProcess {
             case RESET:
                rst.read();
                iteration = 1;
-               System.out.println("Temps " 
+               System.out.println("Time " 
                      + sdf.format(cal.getTime())
                      + " => rst");
                break;
@@ -54,7 +54,7 @@ public class MeasuringDevice implements CSProcess {
                     nCapteurs++) {
                   
                   id = (Integer)i.read();
-                  System.out.println("Temps " 
+                  System.out.println("Time " 
                         + sdf.format(cal.getTime()) 
                         + " => capteur " + id);
                }

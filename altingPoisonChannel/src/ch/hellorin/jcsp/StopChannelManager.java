@@ -1,4 +1,4 @@
-package ch.hellorin.jcsp.altingPoisonChannel;
+package ch.hellorin.jcsp;
 
 import org.jcsp.lang.*;
 

@@ -1,4 +1,4 @@
-package ch.hellorin.jcsp.synchronisationBarrier;
+package ch.hellorin.jcsp;
 
 import org.jcsp.lang.Any2OneChannel;
 import org.jcsp.lang.Channel;

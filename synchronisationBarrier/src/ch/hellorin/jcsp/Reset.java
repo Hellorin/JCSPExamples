@@ -1,4 +1,4 @@
-package ch.hellorin.jcsp.synchronisationBarrier;
+package ch.hellorin.jcsp;
 
 import java.util.Scanner;
 import org.jcsp.lang.*;
