@@ -13,5 +13,5 @@ There is two examples in this repository for now:
     * Can be found in the folder altingPoisonChannel
 
 Each of these folders contain an ant build file:
-* First move to the approriate folder (*altingPoisonChannel* or *synchronisationBarrier*) with **cd**
+* First move to the appropriate folder (*altingPoisonChannel* or *synchronisationBarrier*) with **cd**
 * Use then the following command **ant clean run**
